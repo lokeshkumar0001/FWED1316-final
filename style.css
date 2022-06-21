@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Prata&display=swap");
+
+body {
+  margin: 0;
+  background: rgb(15, 15, 15);
+  color: white;
+  text-align: left;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Prata";
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+article {
+  padding: 2em;
+  background: #181818;
+}
+
+h3 {
+  color: rgb(199, 199, 199);
+}
+
+p ,a{
+  font-family: "Lato";
+  color: rgb(160, 160, 160);
+  margin-top: 0;
+  line-height: 1.6em;
+}
+
+.outer {
+  margin: 0 auto;
+  padding: 1em;
+  width: 80%;
+}
+
+section {
+  /* Iteration 1: Divide "section" into 3 column and give a gap of "2em" between each column */
+  /* Iteration 2: Draw a rule(line) of 4px, solid and rgb(43,43,43) between each columnn */
+  column-count: 3;
+  column-gap: 2em;
+  column-rule: 4px solid rgb(43, 43, 43);
+}
+
+.bottom-section {
+/* Iteration 3: Divide "bottom-section" into column of width "15rem" and give a gap of "2em" between each column */
+/* Iteration 4: Draw a rule of 4px, solid and rgb(43,43,43) between each columnn */
+  column-width: 15rem;
+  column-gap: 2em;
+  column-rule: 4px solid rgb(43, 43, 43);
+}
+
+img {
+  width: 80%;
+}
+
+h2 {
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+h2::before {
+  content: " ";
+  position: absolute;
+  width: 30%;
+  height: 10px;
+  z-index: -1;
+  bottom: -0.3em;
+  left: -2em;
+  background: purple;
+  border-radius: 1em;
+}
+
+p.span-all {
+  /* Iteration 5: Use appropriate property to span this class to all column */
+  column-span: all;
+  font-size: 1.6em;
+  padding: 0.5em;
+  margin: 2em 0;
+  color: white;
+  text-align: center;
+}
+
